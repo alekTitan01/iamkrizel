@@ -1,12 +1,14 @@
 import React from "react";
 import { NavigationContainer } from './styles';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Navigation = () => {
+
+    const navigate = useNavigate()
+
     return <NavigationContainer>
         <div className='nav-logo'>
-            <span className='image'>Logo</span>
-            <span className='name'>name</span>
+            <span style={{ cursor: 'pointer' }} onClick={() => navigate('/')} className='image'>Logo</span>
         </div>
         <div className='nav-menu'>
             <Link to='/'>Home</Link>
