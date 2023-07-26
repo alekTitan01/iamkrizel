@@ -12,7 +12,7 @@ const Services = () => {
         <div>
             Main Services
         </div>
-        <ActionButton onClick={() => navigate('/services')}>
+        <ActionButton onClick={() => navigate('/iamkrizel/services')}>
             Learn more
         </ActionButton>
     </ServicesContainer>;

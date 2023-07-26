@@ -9,11 +9,11 @@ const Footer = () => {
             <span>address</span>
         </div>
         <div className='footer-menu'>
-            <Link to='/'>Home</Link>
-            <Link to='/about'>About</Link>
-            <Link to='/services'>Services</Link>
-            <Link to='/portfolio'>Portfolio</Link>
-            <Link to='/contacts'>Contacts</Link>
+            <Link to='/iamkrizel'>Home</Link>
+            <Link to='/iamkrizel/about'>About</Link>
+            <Link to='/iamkrizel/services'>Services</Link>
+            <Link to='/iamkrizel/portfolio'>Portfolio</Link>
+            <Link to='/iamkrizel/contacts'>Contacts</Link>
         </div>
         <div className='footer-social'>
             <div>Social Media</div>
