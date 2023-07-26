@@ -1,5 +1,6 @@
 import React from "react";
 import { NavigationContainer } from './styles';
+import { Link } from 'react-router-dom';
 
 const Navigation = () => {
     return <NavigationContainer>
@@ -8,11 +9,11 @@ const Navigation = () => {
             <span className='name'>name</span>
         </div>
         <div className='nav-menu'>
-            <span>Home</span>
-            <span>About me</span>
-            <span>Services</span>
-            <span>Portfolio</span>
-            <span>Contacts</span>
+            <Link to='/'>Home</Link>
+            <Link to='/about'>About</Link>
+            <Link to='/services'>Services</Link>
+            <Link to='/portfolio'>Portfolio</Link>
+            <Link to='/contacts'>Contacts</Link>
         </div>
     </NavigationContainer>;
 };

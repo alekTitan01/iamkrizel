@@ -1,19 +1,15 @@
 import React from "react";
+import MainHeader from './sections/header';
+import ProfileInfo from './sections/profileInfo';
+import Services from './sections/services';
+import Certificates from './sections/certificates';
 
 const HomePage = () => {
-    return <main class="scroll-container">
-        <section>
-            <h2>Section 1</h2>
-        </section>
-        <section>
-            <h2>Section 2</h2>
-        </section>
-        <section>
-            <h2>Section 3</h2>
-        </section>
-        <section>
-            <h2>Section 4</h2>
-        </section>
+    return <main>
+        <MainHeader />
+        <ProfileInfo />
+        <Services />
+        <Certificates />
     </main>;
 };
 
