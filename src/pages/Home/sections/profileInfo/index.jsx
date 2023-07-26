@@ -9,7 +9,7 @@ const ProfileInfo = () => {
 
     return <ProfileInfoContainer>
         <div className='column image'>
-            <img alt='' src={`${process.env.PUBLIC_URL}/images/random-profile.jpg`} />
+            <img alt='' src={`${process.env.PUBLIC_URL}/images/random-profile.webp`} />
         </div>
         <div className='column content'>
             <h2>About Me</h2>

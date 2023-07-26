@@ -4,7 +4,7 @@ import { HeaderSection } from '../../styles';
 const MainHeader = () => {
     return <HeaderSection>
         <div className='header-img'>
-            <img src={`${process.env.PUBLIC_URL}/images/header-image.jpg`} alt='' />
+            <img src={`${process.env.PUBLIC_URL}/images/header-image.webp`} alt='' />
         </div>
         <div className='header-content'>
             <h1>This is the header</h1>
