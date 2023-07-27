@@ -8,9 +8,7 @@ const ProfileInfo = () => {
     const navigate = useNavigate()
 
     return <ProfileInfoContainer>
-        <div className='column image'>
-            <img alt='' src={`${process.env.PUBLIC_URL}/images/random-profile.webp`} />
-        </div>
+        <div className='column image' />
         <div className='column content'>
             <h2>About Me</h2>
             <ActionButton onClick={() => navigate('/iamkrizel/about')}>

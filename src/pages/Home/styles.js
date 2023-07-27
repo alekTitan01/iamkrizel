@@ -1,16 +1,23 @@
 import styled from "styled-components";
 
+const headerUrl = `${process.env.PUBLIC_URL}/images/header-image.webp`
+const pic1Url = `${process.env.PUBLIC_URL}/images/random-profile.webp`
+
 export const HeaderSection = styled.section`
-    display: flex;
-    align-items: center;
-    gap: 7rem;
-    padding: 5rem;
-    justify-content: center;
-    flex: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    background-color: #F2EDE3;
+    ${'' /* padding: 5rem; */}
 
     & .header-img {
-        max-height: 80vh;
-        max-width: 30vw;
+        margin: auto;
+        background-image: url(${headerUrl});
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: left;
+        width:100%;
+        height: 100%;
 
         & img {
             max-width: 100%;
@@ -19,20 +26,34 @@ export const HeaderSection = styled.section`
     }
 
     & .header-content{
-        max-width: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        height: 100%;
+        width: 100%;
+        flex-direction: column;
+
+        & div{
+            max-width: 500px;
+        }
     }
 `
 
 export const ProfileInfoContainer = styled.section`
-    padding: 7rem;
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Two columns with equal width */
-    gap: 7rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    height: 90vh;
 
     & .column.image {
         margin: auto;
-        max-height: 80vh;
-
+        background-image: url(${pic1Url});
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: right;
+        width:100%;
+        height: 100%;
+        
         & img {
             max-width: 100%;
             height: auto;
