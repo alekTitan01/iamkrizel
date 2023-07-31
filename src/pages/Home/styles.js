@@ -93,7 +93,7 @@ export const ServicesContainer = styled.section`
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    height: 80vh;
+    height: 40rem;
 
     & .service-row {
         margin: 0 5rem;
@@ -117,13 +117,15 @@ export const ServicesContainer = styled.section`
                 position: relative;
                 width: 400px;
                 height: 300px;
+                overflow: hidden;
 
                 & img {
-                    width: 400px;
-                    height: 300px;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
                 }
 
-                & span {
+                & .service-info {
                     position: absolute;
                     bottom: 0;
                     left: 0;
@@ -134,9 +136,41 @@ export const ServicesContainer = styled.section`
                     font-weight: bold;
                     z-index: 1;
                     color: white;
-                    background: rgba(255, 255, 255, 0.1);
+                    background: rgba(255, 255, 255, 0.2);
                     backdrop-filter: blur(5px);
                     -webkit-backdrop-filter: blur(5px);
+                    transition: height 0.3s ease;
+                    height: 20%;
+                    color: #3a3a3a;
+                    display: flex;
+                    flex-direction: column;
+
+                    & a {
+                        opacity: 0;
+                        position: absolute;
+                        bottom: 20px;
+                        right: 20px;
+                        cursor: pointer;
+                        color: #3a3a3a; 
+                        text-decoration: none;
+                        font-size: 16px;
+
+                        &:hover{
+                            color: black;
+                        }
+                    }
+
+                }
+
+                &:hover {
+                    & .service-info {
+                        height: 30%;
+
+                        & a {
+                            opacity: 1;
+                            transition: opacity 0.3s ease-in;
+                        }
+                    }
                 }
             }
         }
