@@ -93,7 +93,63 @@ export const ServicesContainer = styled.section`
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    height: 100vh;
+    height: 80vh;
+
+    & .service-row {
+        margin: 0 5rem;
+        overflow: hidden;
+        padding: 10px 0;
+        background-color: white;
+        white-space: nowrap;
+        display: flex;
+        gap: 2rem;
+
+        &:hover .service-content {
+            animation-play-state: paused;
+        }
+
+        & .service-content {
+            display: flex;
+            gap: 2rem;
+            animation: 70s slide infinite linear;
+
+            & .service-image {
+                position: relative;
+                width: 400px;
+                height: 300px;
+
+                & img {
+                    width: 400px;
+                    height: 300px;
+                }
+
+                & span {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    padding: 1rem 0;
+                    width: 400px;
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: bold;
+                    z-index: 1;
+                    color: white;
+                    background: rgba(255, 255, 255, 0.1);
+                    backdrop-filter: blur(5px);
+                    -webkit-backdrop-filter: blur(5px);
+                }
+            }
+        }
+
+        @keyframes slide {
+            from{
+                transform: translateX(0);
+            }
+            to{
+                transform: translateX(-100%);
+            }
+        }
+    }
 `
 
 export const CertificatesContainer = styled.section`
