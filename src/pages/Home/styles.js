@@ -1,29 +1,11 @@
 import styled from "styled-components";
-
-const headerUrl = `${process.env.PUBLIC_URL}/images/header-image.webp`
-const pic1Url = `${process.env.PUBLIC_URL}/images/random-profile.webp`
+import { pic1Url } from '../../utils/constants';
 
 export const HeaderSection = styled.section`
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 4fr 6fr;
     gap: 0.5rem;
-    background-color: #F2EDE3;
-    ${'' /* padding: 5rem; */}
-
-    & .header-img {
-        margin: auto;
-        background-image: url(${headerUrl});
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: left;
-        width:100%;
-        height: 100%;
-
-        & img {
-            max-width: 100%;
-            height: auto;
-        }
-    }
+    background-color: #EAE9EE;
 
     & .header-content{
         display: flex;
@@ -35,6 +17,25 @@ export const HeaderSection = styled.section`
 
         & div{
             max-width: 500px;
+
+            & h1 {
+                font-size: 40px;
+            }
+
+            & p {
+                font-size: 18px;
+                line-height: 1.5;
+            }
+        }
+    }
+
+    & .image-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        & img {
+            height: 60%;
         }
     }
 `
@@ -43,7 +44,7 @@ export const ProfileInfoContainer = styled.section`
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0.5rem;
-    height: 90vh;
+    height: 70vh;
 
     & .column.image {
         margin: auto;
@@ -53,6 +54,7 @@ export const ProfileInfoContainer = styled.section`
         background-position: right;
         width:100%;
         height: 100%;
+        border-radius: 0% 100% 19% 81% / 70% 25% 75% 30%;
         
         & img {
             max-width: 100%;
@@ -67,22 +69,13 @@ export const ProfileInfoContainer = styled.section`
         display:flex;
         align-items: center;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: center;
+        max-width: 500px;
+        ${'' /* justify-content: space-between; */}
 
-        & button {
-            width: fit-content;
-            padding: 1rem 2rem;
-            border-radius: 5px;
-            font-size: 16px;
-            border: 1px solid #ccc;
-            background-color: white;
-            transition: background-color 0.3s ease;
-            cursor: pointer;
-
-            &:hover {
-                background-color: red;
-                color: white;
-            }
+        & p {
+            line-height: 1.5;
+            font-size: 18px;
         }
     }
 `
@@ -118,6 +111,7 @@ export const ServicesContainer = styled.section`
                 width: 400px;
                 height: 300px;
                 overflow: hidden;
+                border-radius: 5px;
 
                 & img {
                     width: 100%;
@@ -135,13 +129,12 @@ export const ServicesContainer = styled.section`
                     font-size: 20px;
                     font-weight: bold;
                     z-index: 1;
-                    color: white;
-                    background: rgba(255, 255, 255, 0.2);
-                    backdrop-filter: blur(5px);
-                    -webkit-backdrop-filter: blur(5px);
+                    background: rgba(34, 51, 58, 0.3);
+                    backdrop-filter: blur(2px);
+                    -webkit-backdrop-filter: blur(2px);
                     transition: height 0.3s ease;
                     height: 20%;
-                    color: #3a3a3a;
+                    color: #EAE9EE;
                     display: flex;
                     flex-direction: column;
 
@@ -151,12 +144,12 @@ export const ServicesContainer = styled.section`
                         bottom: 20px;
                         right: 20px;
                         cursor: pointer;
-                        color: #3a3a3a; 
+                        color: #EAE9EE; 
                         text-decoration: none;
                         font-size: 16px;
 
                         &:hover{
-                            color: black;
+                            color: #ccc;
                         }
                     }
 

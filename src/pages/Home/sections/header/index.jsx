@@ -1,15 +1,19 @@
 import React from "react";
 import { HeaderSection } from '../../styles';
+import { headerUrl } from '../../../../utils/constants';
+
 
 const MainHeader = () => {
     return <HeaderSection>
         <div className='header-content'>
             <div>
-                <h1>This is the header</h1>
-                <p>Nulla cursus rhoncus leo, eu malesuada est tincidunt non. Maecenas quis ligula sit amet sem vestibulum accumsan vitae blandit risus. Integer aliquet eros diam, sed iaculis nulla malesuada in. Quisque in dui sit amet justo congue aliquam. Ut vestibulum, neque sit amet aliquet ultricies, eros tellus suscipit lacus, in accumsan eros odio eget velit. In pretium lectus malesuada, rhoncus ante in, placerat metus. Maecenas rutrum ac sapien at scelerisque</p>
+                <h1>Meet Your Virtual Assistant: The Future of Productivity!</h1>
+                <p>Welcome to KM Virtual Assistant, where your productivity meets its perfect match. I am your dedicated virtual assistant, committed to simplifying your life and helping you achieve your goals with ease</p>
             </div>
         </div>
-        <div className='header-img' />
+        <div className='image-content'>
+            <img src={headerUrl} alt='' />
+        </div>
     </HeaderSection>;
 };
 

@@ -9,10 +9,10 @@ export const ActionButton = styled.button`
     background-color: white;
     transition: background-color 0.3s ease;
     cursor: pointer;
+    font-weight: bold;
 
     &:hover {
-        background-color: red;
+        background-color: #22333A;
         color: white;
     }
-
 `
