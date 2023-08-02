@@ -6,6 +6,16 @@ const Navigation = () => {
 
     const navigate = useNavigate()
 
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
     return <NavigationContainer>
         <div className='nav-logo'>
             <span style={{ cursor: 'pointer' }} onClick={() => navigate('/iamkrizel')} className='image'>Logo</span>
@@ -15,7 +25,7 @@ const Navigation = () => {
             <Link to='/iamkrizel/about'>About</Link>
             <Link to='/iamkrizel/services'>Services</Link>
             <Link to='/iamkrizel/portfolio'>Portfolio</Link>
-            <Link to='/iamkrizel/contacts'>Contacts</Link>
+            <a href='#footer'>Contacts</a>
         </div>
     </NavigationContainer>;
 };

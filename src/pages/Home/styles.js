@@ -88,6 +88,10 @@ export const ServicesContainer = styled.section`
     justify-content: space-between;
     height: 40rem;
 
+    & h1 {
+        font-size: 35px;
+    }
+
     & .service-row {
         margin: 0 5rem;
         overflow: hidden;
@@ -186,6 +190,10 @@ export const CertificatesContainer = styled.section`
     align-items: center;
     gap: 5rem;
     height: auto;
+
+    & h1 {
+        font-size: 35px;
+    }
 
     & .column-container {
         display: grid;

@@ -12,7 +12,6 @@ export const NavigationContainer = styled.div`
     justify-content: space-between;
     padding: 1rem 5rem;
     background-color: transparent;
-    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
 
     & .nav-logo {
         display: flex;
@@ -59,15 +58,65 @@ export const FooterContainer = styled.div`
         display: flex;
         align-items: flex-start;
         flex-direction: column;
-        gap: 2rem;
+        gap: 1rem;
         font-weight: bold;
+        padding: 1rem;
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(2px);
+        -webkit-backdrop-filter: blur(2px);
+        border-radius: 5px;
+        position: relative;
 
-        & .map {
-            border: 1px solid #9b9696;
-            width: 500px;
-            height: 300px;
-            text-align: center;
-            border-radius: 10px;
+        & .form {
+            display: flex;
+            gap: 0.6rem;
+            flex-direction: column;
+
+            & .form-name {
+                display: flex;
+                gap: 0.5rem;
+            }
+
+            & .inputForm {
+                font-size: 16px;
+
+                & input {
+                    outline: none;
+                    border-radius: 5px;
+                    border: 1px solid #748192;
+                    font-size: 16px;
+                    padding: 0.4rem 0.5rem;
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                }
+            }
+
+            & .message {
+                display: flex;
+                flex-direction: column;
+                font-size: 16px;
+
+                & textarea {
+                    outline: none;
+                    border-radius: 5px;
+                    border: 1px solid #748192;
+                    font-size: 17px;
+                    padding: 0.4rem 0.5rem;
+                }
+            }
+
+            & .form-action {
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+
+                & button {
+                    padding: 0.5rem 2rem;
+                    border: none; 
+                    fontWeight: bold;
+                }
+            }
         }
     }
 
@@ -113,7 +162,7 @@ export const FooterContainer = styled.div`
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            gap: 0.5rem;
+            gap: 1rem;
             justify-content: flex-start;
             text-decoration: underline;
 
@@ -157,4 +206,17 @@ export const FooterContainer = styled.div`
             }
         }
     }
+`
+
+export const FormErrors = styled.p`
+    color: red;
+    padding: 0;
+    margin: 0;
+    font-size: 15px;
+    font-weight: 500;
+`
+
+export const ToastMessage = styled.span`
+    font-size: 16px;
+    line-height: 1.2;
 `
