@@ -44,7 +44,7 @@ export const ProfileInfoContainer = styled.section`
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0.5rem;
-    height: 70vh;
+    height: 70dvh;
 
     & .column.image {
         margin: auto;

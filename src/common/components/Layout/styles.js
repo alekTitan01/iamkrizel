@@ -12,6 +12,7 @@ export const NavigationContainer = styled.div`
     justify-content: space-between;
     padding: 1rem 5rem;
     background-color: transparent;
+    z-index: 10;
 
     & .nav-logo {
         display: flex;

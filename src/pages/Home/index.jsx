@@ -5,12 +5,12 @@ import Services from './sections/services';
 import Certificates from './sections/certificates';
 
 const HomePage = () => {
-    return <main>
+    return <>
         <MainHeader />
         <ProfileInfo />
         <Services />
         <Certificates />
-    </main>;
+    </>
 };
 
 export default HomePage;

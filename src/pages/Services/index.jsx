@@ -2,11 +2,18 @@ import React from "react";
 import { ServicesSection } from './style';
 
 const Services = () => {
-    return <main>
+    return <>
         <ServicesSection>
-            <h1>Services page</h1>
+            <div className='services-header-container'>
+                <div className='service-header' />
+                <div className='bg-gradient' />
+                <h1 className='service-title'>My Services</h1>
+            </div>
+            <div className='service-content'>
+
+            </div>
         </ServicesSection>
-    </main>;
+    </>;
 };
 
 export default Services;

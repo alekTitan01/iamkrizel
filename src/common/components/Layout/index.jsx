@@ -6,7 +6,9 @@ import { LayoutContainer } from './styles';
 const index = ({ children }) => {
     return <LayoutContainer>
         <Navigation />
-        {children}
+        <main>
+            {children}
+        </main>
         <Footer />
     </LayoutContainer>;
 };
