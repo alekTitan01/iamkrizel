@@ -4,7 +4,7 @@ export const LayoutContainer = styled.div`
     position: relative;
 `
 
-export const NavigationContainer = styled.div`
+export const NavigationContainer = styled.nav`
     position: absolute;
     width: 100%;
     display: flex;
@@ -46,7 +46,7 @@ export const NavigationContainer = styled.div`
     }
 `
 
-export const FooterContainer = styled.div`
+export const FooterContainer = styled.footer`
     padding: 3rem;
     display: flex;
     align-items: flex-start;

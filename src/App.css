@@ -6,8 +6,3 @@ body {
     margin: 0;
     font-family: "Helvetica", sans-serif;
 }
-
-section {
-    height: 100dvh;
-    scroll-snap-align: center;
-}

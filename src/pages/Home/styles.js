@@ -6,6 +6,7 @@ export const HeaderSection = styled.section`
     grid-template-columns: 4fr 6fr;
     gap: 0.5rem;
     background-color: #EAE9EE;
+    height: 100dvh;
 
     & .header-content{
         display: flex;
